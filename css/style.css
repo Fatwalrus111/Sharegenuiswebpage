@@ -4,6 +4,16 @@ h1{
         background-color: rgb(2, 49, 136); 
         text-align: center;
     }
+h3{
+    color: rgb(255, 183, 0);
+    text-align: center;
+    font-size: x-large;
+}
+p.center {
+    color: black; 
+    text-align: center;
+    text-decoration: underline;
+}
 .page_one{   
     background-color: blue; 
     color: rgb(239, 231, 0);
@@ -30,18 +40,97 @@ ul.nav a:hover {
     background-color: #555;
     color: white;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 .active {
     background-color: rgb(204, 121, 12);
 }
 .c {
     white-space: pre;
   }
-p.square{
-    width: 100px;
-    height: 100px;
-    background: rgb(61, 1, 68);
-    transition: width 2s;
+.expandable-square {
+    width:auto;
+    height: 50px;
+    background-color: #29398a;
+    margin-top: 20px;
+    transition: width 0.3s ease, height 0.3s ease;}
+
+.expandable-square:hover {
+    width:auto;
+    height: 100px;}
+
+.list-container {
+        display: flex;
+        justify-content: flex-start; /* Aligns the text to the left */
+        width: 40%; /* Takes up the left half of the screen */
+        margin-left: 0; /* No extra margin on the left */
+        margin-right: auto; /* Push the content to the left */
 }
-p.square:hover {
-    height: 100px;
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+.video-first{
+    width: 50%;
+    float: right;
+}
+.video-container {
+    width: 33%;
+    float: right;
+}
+.video-left {
+    width: 33%;
+    float: left;
+}
+
+.one{
+    background-color: #0629d6;
+}
+.page_two{
+    background-color: brown;
+    color: burlywood;}
+.two{
+    background-color: chocolate;
+}
+
+.spanned{
+    color: coral;
+    font-size: xx-large;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.contact{
+    color: #000000;
+    text-align: center;
+    font-size: large;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
+    justify-items: center;
+    margin: 20px 0;
+}
+
+.image-grid img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    border: 2px solid white; 
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; 
+    }
 }
